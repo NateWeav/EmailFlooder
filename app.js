@@ -581,6 +581,147 @@ const sites = {
             "mode": "cors"
         });
         consola.success('Signed up for https://www.msnbc.com/newsletters');
+    }),
+    "nbc26.com": (async email => {
+        await fetch("https://api.ewscloud.com/prod/notifications/v1/wgba/contactlists/subscribe/", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "authorization": "Token 09de6f3130469f80b9916b0aa568c6e92587b70a",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "cross-site"
+            },
+            "referrer": "https://www.nbc26.com/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"email\":\"" + email + "\",\"contactlist\":[\"8dd3e567-62dc-4aca-bc0c-9650de13aad4\",\"edac06c6-aa98-4904-98db-400d1d5fae99\",\"a08bacd6-657d-422b-a117-0af500a6ea7f\",\"81e98b4e-4158-4760-9031-9c2d9e50b666\",\"edfcc3c0-c337-4498-91e0-5d17690185a1\",\"a53cc146-456f-4b57-b0dd-d10956a79963\"]}",
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://www.nbc26.com/account/manage-email-preferences');
+    }),
+    "msn.com": (async email => {
+        await fetch("https://www.msn.com/en-us/SubscribeUser?topics=MSNToday,BestofMSN,msnusernurturing&email=" + email + "&ver=20210314_19444127", {
+            "headers": {
+                "accept": "application/json, text/javascript, */*; q=0.01",
+                "accept-language": "en-US,en;q=0.9",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "cookie": "anoncknm=; _EDGE_S=F=1; _EDGE_V=1; MUID=32B767F2E79263741B82680DE62562C3"
+            },
+            "referrer": "https://www.msn.com/en-us/newslettersignup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": null,
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://www.msn.com/en-us/newslettersignup');
+    }),
+    "cbssports.com": (async email => {
+        const encodedEmail = email.replace('@', '%40');
+        await fetch("https://www.cbssports.com/fantasy/newsletter-sign-up/xhr/", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178219944$ses_id:1616176414896%3Bexp-session$_pn:3%3Bexp-session; _BB.d=0|||3; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A53%3A40+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:53:40.646Z"
+            },
+            "referrer": "https://www.cbssports.com/newsletters/cbs-sports-hq/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "action=optIn&custId=&destination=cbs&masterProductId=23708&mCode=m23661&source=nlsplash&userLogin=&emailAddress=" + encodedEmail,
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://www.cbssports.com/fantasy/newsletter-sign-up/xhr/", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178265238$ses_id:1616176414896%3Bexp-session$_pn:4%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A54%3A25+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:54:25.371Z; _BB.d=0|||4"
+            },
+            "referrer": "https://www.cbssports.com/newsletters/pick-six/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "action=optIn&custId=&destination=cbs&masterProductId=23708&mCode=m23664&source=nlsplash&userLogin=&emailAddress=" + encodedEmail,
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://www.cbssports.com/fantasy/newsletter-sign-up/xhr/", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178276518$ses_id:1616176414896%3Bexp-session$_pn:5%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A54%3A36+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:54:36.614Z; _BB.d=0|||5"
+            },
+            "referrer": "https://www.cbssports.com/newsletters/fantasy-football-today/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "action=optIn&custId=&destination=cbs&masterProductId=23708&mCode=m23662&source=nlsplash&userLogin=&emailAddress=" + encodedEmail,
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://www.cbssports.com/fantasy/newsletter-sign-up/xhr/", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178290561$ses_id:1616176414896%3Bexp-session$_pn:6%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A54%3A50+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:54:50.669Z; _BB.d=0|||6"
+            },
+            "referrer": "https://www.cbssports.com/newsletters/fantasy-baseball-today/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "action=optIn&custId=&destination=cbs&masterProductId=23708&mCode=m23663&source=nlsplash&userLogin=&emailAddress=" + encodedEmail,
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://www.cbssports.com/fantasy/newsletter-sign-up/xhr/", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178302463$ses_id:1616176414896%3Bexp-session$_pn:7%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A55%3A02+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:55:02.605Z; _BB.d=0|||7"
+            },
+            "referrer": "https://www.cbssports.com/newsletters/the-first-cut/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "action=optIn&custId=&destination=cbs&masterProductId=23708&mCode=m23584&source=nlsplash&userLogin=&emailAddress=" + encodedEmail,
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://www.cbssports.com/newsletters/cbs-sports-hq/');
     })
 }
 
