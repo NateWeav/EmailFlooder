@@ -359,6 +359,228 @@ const sites = {
             "credentials": "include"
         });
         consola.success('Signed up for https://www.contacts.nbc.ca/newsletter/subscription');
+    }),
+    "nbc15.com": (async email => {
+        await fetch("https://api.secondstreetapp.com/form_page_submissions", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "cross-site",
+                "x-api-key": "65032887",
+                "x-organization-id": "327"
+            },
+            "referrer": "https://www.nbc15.com/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"form_page_submissions\":[{\"form_id\":994337,\"form_page_id\":1314207,\"design_id\":\"1976901\",\"fields\":[{\"field_id\":39,\"field_value\":\"" + email + "\"}]}]}",
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://www.nbc15.com/newsletter/');
+    }),
+    "covid19updates": (async email => {
+        await fetch("https://confirmsubscription.com/t/t/HostedSubscribeForm/yhhrtly", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://confirmsubscription.com/h/t/6925B3D1925FFCCF",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"fields\":[{\"id\":\"fieldName\",\"type\":\"Text\",\"value\":[\"AAAAA BBBBB\"]},{\"id\":\"fieldEmail\",\"type\":\"Email\",\"value\":[\"" + email + "\"]}],\"referrer\":\"https://www.reddit.com/\",\"reCaptchaResponse\":null}",
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://confirmsubscription.com/h/t/6925B3D1925FFCCF');
+    }),
+    "cervical": (async email => {
+        await fetch("https://confirmsubscription.com/t/d/HostedSubscribeForm/jrdkkkk", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://confirmsubscription.com/h/d/111B22A75495D78E",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"fields\":[{\"id\":\"fieldName\",\"type\":\"Text\",\"value\":[\"AAAAA BBBBB\"]},{\"id\":\"fieldEmail\",\"type\":\"Email\",\"value\":[\"" + email + "\"]},{\"id\":\"fieldjyykiti\",\"type\":\"MultiSelectOne\",\"value\":[\"5581772\"]}],\"referrer\":\"https://www.reddit.com/\",\"reCaptchaResponse\":null}",
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://confirmsubscription.com/h/d/111B22A75495D78E');
+    }),
+    "nbcstuff": (async email => {
+        const encodedEmail = email.replace('@', '%40');
+        await fetch("https://link.nbcnews.com/join/5cj/the-nightly-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20The%20Nightly%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520The%252520Nightly%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520The%252520Nightly%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128428s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "https://link.nbcnews.com/join/5cj/the-nightly-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_nightlynews%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq25VsPLIhz3eeigcbf9FNIq6y3OMQsq8R9r-Ty-EEi7YAIwFgUPVl35qxYFdN6PdypRTar93vFuTz9kK_2pXY_caoQdWtoAJ_c_EGsn_iVZ25FhUAldXZoVi2CnEClaLJ5PR9Q7_OjOuw8CUR2-NSuYwBCJfZrh7NssuGeZzekQzRXrCrCqTRbypZVRayrJ4Il_bP_58pcYTT62eZ55VnOmUbwlibiDQJXdIjZzbZcvYA6madoNEiJWk07eq-XWCtulJatL6I1EwNLTF71Ol0XdMBhPJavw87q5aSvCj7Xr593BWGp-ILhMlP6gQO2ycxlTgPH_bQ4UfKfcqSF6uwljJnAQEC1XwudPahsSCYZOfklJr4dr8YXj_HlviJSv2fPzgU6eotLHu73t0lg3iw-gCQO1fpnO0VawTGOFLMrDNjGa8bWxvLdxB-kfVnumNfFof8oOX&nonce_60540d51ed443=60540d51ed445&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://link.nbcnews.com/join/5cj/breaking-news-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20Breaking%20News%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Breaking%252520News%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Breaking%252520News%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128508s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "https://link.nbcnews.com/join/5cj/breaking-news-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_breaking%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq25CAzbvlIuoc51SOgRoNk509uVCcflJvPObJzTqdlA39zGhm4rp4WrunDHCY6CngJPZJ7qbnBpy5zvg0ebvnLjv6-MToWZ761CopLjkDMEkTZ3Uax0OTyi54vOFAmLL-VcXc5N9Kiy6kO6ODS_pRgJZbAaJ7ADI0kv_RAehclSmXI-LVn_EKAhS5ulpB7iD6gjcp0viobA5QN-0oI_2Bev86Eo1OST0I3xadsHI_Utgd1eXCxX30TExHIQJ0R-7siAb-ZFs-lwSzvCGuyA6LMzfC9pQRToYWvc9IREFEEjXq63Y0HriP2tsR-TmUvD7e9BxplxZe2vS5s2t8Xh6-KMP67TqFGWNEwhHu5rqf8DOmghk1dBhRkGf3KJoAzbsAo3zGirBpVgT0gQz06aFDlrLZeMdGkPMGKkwqjGYtrRlFEjN3uNhP38lyvN1yN1EN3HsqiyZ&nonce_60540d8009aae=60540d8009ab0&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("http://link.nbcnews.com/join/5cj/first-read-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "upgrade-insecure-requests": "1",
+                "cookie": "AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20First%20Read%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520First%252520Read%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520First%252520Read%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128521s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "http://link.nbcnews.com/join/5cj/first-read-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_firstread%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq26_2RmwBEQStU1LHts82LCDCREH_aHMq0JKIQYYX9gPSZMhwzVf4zVotVd7_trlLN24w5ooMibv3ARyl7Wui5TGawpdFdPuDQiViR6bfJEK1IsVBYiHgHZmh40ptd0bZQZad1j5t_Mh8WNIQl2xfQmUjzzvO-bhctGjbQHAj1yYU2aTKAuzrKNmL7jcq3tRxJhKrpaW45r_Ds-Z8pjKlja9HCoxkq98S8c_HqhGFQtgTnp8FCFueealq08Pv1W9heMqY8WZRSchwVJYtV2y7qB2ETPwZ_r5EC5mQ49RZD2I3_f5XIlxRkHUS2sdQq9somX5-_YYCIJmWrA2eBlesNbBrBaSdtWgfq8bPFxJ_LpYnRu8dSu7Ur7NnLd2NRnDoZk8tW1QntfFPDPIGOKOcWN-br5BcTTrn9jIJQE1f7wx9VJjUVWc8_xbBII_H5DG8t_6nsIk&nonce_60540d827d749=60540d827d74b&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://link.nbcnews.com/join/5cj/dateline-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20Dateline%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Dateline%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Dateline%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128533s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "https://link.nbcnews.com/join/5cj/dateline-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_dateline%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq24k88MHuPoBVdYi1Fww_JCK2-Kj1097fYAdni0tiikTuHvKJYsM745Np25om1n4dayS-ayZn02Jr1KYLxXfOQXvE48SyO2hD2SUSUEWia48KUKjsBZM2rTOG_cKw82UFxZmdhYvkzMGOWJXklWFFDbl1FlTSgdDUvxpz0ZPl7mrv4l5OBX7MgzEXMoZr1r8NvhJQnJFHOZAiVzsEfFQNuAtbogtqP4M47vK7iOJASKYm6hcYwg2XqR28X9uzn7m9oPzPcOaUAFOxeySvk2EcGE5CcYqZGCKexc21lfHZA5BzSp06NkC9VZWp-49qhAk9CvjcooO438_VzzGnrD90_wtn4ssAoohMqT-eqSSIwPSWOwWWbGatWInhe021uE2d7kouPg8JOXg1KfPHU4aDWQKBFD6daI38eJG3ZoK_B38P2h-5onJYhzfeL5110ELPyeStPzq&nonce_60540d8333170=60540d8333172&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://link.nbcnews.com/join/5cj/think-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20THINK%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520THINK%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520THINK%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128548s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "https://link.nbcnews.com/join/5cj/think-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_think%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq27zQoMaISZrWWjv5hYWZc-fwmGB8BvtDV2ZE2CyZAdd9WV6gwXjBBF3M5jJdItD5LkHTkGTeWBGYYOPvU0LajrpSkyxAYkyLvFGSkySt_6WIc5GC90B25uREIjhuUMvd7DCQG8hnU08B0JWtREIs3v7TcAFsVsstP8dCDErgIwbBDTFe0RCnVHAk7pz1BO1VLzRgRjNOfGNrVHCuUoZvRnws0814fU8UR-GR6hrlb_pnknC0CV10j4iuDJIpOtJN8fPvijY4etPjc0ybtvgpEDdOhn5VVDEPNmaSMX4474olMYWNj9eRzwU9JkMmPfscbRFHjQjiF_5aEF61r4QCjdXuPs46-plJY3RwhpKQ4OcFiY_FuSyLLsjYXeeNxeiY3gghk3ve5-WC3u5KrQEBJVmFsBEi-UBSylo96HmJ0PLBi1S47iXf0H8JMXsOfzVCF5OMcJt&nonce_60540d842e033=60540d842e035&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://link.nbcnews.com/join/5cj/better-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20BETTER%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520BETTER%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520BETTER%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128560s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "https://link.nbcnews.com/join/5cj/better-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_better%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq26GhkHJdOO3WUhDMTHkl4SYFj5-E5dgn8YiYmak6fkR0rStDz9yRSibULtdSeHdvoRkC0HB-r4MWajyxwXGCTPweEGbK2THSyikZH7folvV0RhvvqGeQli2aA_Tvgf9aLblYofKnGvw5lqvkwUE3Sr7TnwkR6MljCS2XIclfal_-g0JsyNO-B7nlabRA_dwbpSVrQs8x0SG9fpoIee8pAhz_iy-kWpGRhUqzpobERGBfZZ2OIhJk5MVU7LSqYlcQVov-cSIrbnBzA0TAA2hN4xwThyXH5Ir2L9U7PizaInGeJDMWmTZu0xHEuGav3OsYcxBQqVbXLLMcDjd1oX6XryIkcO6TFMlZwkUA_e3WqiK6Cju71zf20H_W2-EcYNyOt3oB0FDjQ8rysgEnbqb25E081KdqVDclHgvwFVwsgB7vE0QwOUpxCLbRqWssjOKvfWeGI9Y&nonce_60540d848c148=60540d848c14a&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("https://link.nbcnews.com/join/5cj/mach-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20MACH%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520MACH%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520MACH%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128574s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "https://link.nbcnews.com/join/5cj/mach-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_techscience%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq25fANjBm6qniqooH210-ywUXmDj5W87Z7r3I-Qa_p2Y9VKQ8HLCYaU-8GbGMfMpMCGgQA5M4ju4ewdlBGV5xG6bc_VGpyBhi6wA8bg7LtPU4wAnulHPX9wD42G-cnCD9XbN4GgYO0MJ3NSJa2LnK8B7XKK-PLilFgyZOeHhVZ-hPlZOXmLaKHUoRCTJK7DdGdxp8x115KoTbp55mZbWl7eRKCTQNyj0ExeHFmp_K4v6cqzRVNsLtU38hWbaNFNMXsNIDeXk3j9m4PjkGcCcMbW-GNVTGQ52jRCGFKGq3dDXNnWKeDzFumdTFGFe2eYpjtMawVylDg7DHSkustl7BPJLj4ff8uN3ZJprD5HmMlyFxQJ33t-c-n9DgQUym9-CgI7czh5oq14AfOr-eEnZzmPatEA3YQe8S7l0B5WxyNU3sOrRKQAjKFVkEl7z-z5kxckKC3Wc&nonce_60540d84e784a=60540d84e784b&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        await fetch("http://link.nbcnews.com/join/5cj/byers-market-signup", {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                "accept-language": "en-US,en;q=0.9",
+                "cache-control": "max-age=0",
+                "content-type": "application/x-www-form-urlencoded",
+                "upgrade-insecure-requests": "1",
+                "cookie": "AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20Byers%20Market%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Byers%252520Market%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Byers%252520Market%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128591s%7CNONE%7CvVersion%7C4.4.0"
+            },
+            "referrer": "http://link.nbcnews.com/join/5cj/byers-market-signup",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "email=" + encodedEmail + "&lists%5BMaster%5D=1&vars%5Bsub_byers_brief%5D=1&vars%5Bsource%5D=signup-page&g-recaptcha-response=03AGdBq27wVpt9Yj1D8L26naMxHMyrTSx4ZEiXxBBv_cwGmnBr9uL6W5h4CYwv3irRwK4bJLSf8fLQYegy3KS4XJMCI4Zgg3DlET3LmjSKbhR5h0ND2Xa_pJV2lEIHyQC7t8L02KFzLoSFSTozx6ZiBRUlGr-D5kJ9S_oaJAzQUoCvQnc2DqxdXtaLb0N2peLC2xXbVlDshMvHaihWh0yRpm6JfRXfJLHjJunRFnOX2NwUKHdrowEN0zlQ_rDPSj9escpH-E89PFXtTCa8sUOXnFkg7LrfK6ZW0J218rrjIjR1yCgZukum4WUPTcS92d2oElGrn75ZakFjoCqYnrWulXpsqTVBVlhqjNrbpy1HULTQ_kEkmZ1OknTcv3gZqTcfZ0406UkoBQkkib4g-A1Oy0GqZHNrNwq9zdWnZlk-zTHnjVJ_feVEbGjmEupfpmETLpAMTIb3EYy-&nonce_60540d8633df6=60540d8633df7&profile_id=589b4d1d3c8aa9253d8b4580&st_form_num=0",
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://www.msnbc.com/newsletters');
     })
 }
 
