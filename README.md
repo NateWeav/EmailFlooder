@@ -8,3 +8,4 @@ this is for educational purposes only!!!
 - download nodejs
 - clone this repo
 - run `npm install` 
+- run `npm start` 
