@@ -1,5 +1,5 @@
 # EmailFlooder
-this is for educational purposes only!!! only use this on emails and phone numbers you own.
+this is for educational purposes only!!! only use this on emails and phone numbers you own or have permission to flood.
 
 <img src='https://media.discordapp.net/attachments/521029922358165517/822857407591481344/image0.png?width=261&height=565'>
 
