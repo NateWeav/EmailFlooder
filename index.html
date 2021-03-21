@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <meta property="og:title" content="Email Flooder"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://foob.tech/"/>
+    <!--    <meta property="og:image" content="https://ssl.gstatic.com/images/branding/product/2x/hh_drive_96dp.png" />-->
+    <meta property="og:description" content="Floods your email with newsletters."/>
+    <meta name="theme-color" content="#FFBFF8">
+
+    <title>Email Flooder</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .center {
+            width: 90%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .mb-3 {
+            max-width: 300px;
+        }
+
+        .btn-outline-primary {
+            color: #f0ade8;
+            border-color: #f0ade8;
+        }
+
+        .btn-outline-primary:hover {
+            color: #000;
+            background-color: #f0ade8;
+            border-color: #f0ade8;
+        }
+
+        .btn-outline-primary:disabled {
+            color: #000;
+            background-color: #f0ade8;
+            border-color: #f0ade8;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f0ade8;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #f0ade8;
+        }
+
+        img.emoji {
+            height: 1em;
+            width: 1em;
+            margin: 0 .05em 0 .1em;
+            vertical-align: -0.1em;
+        }
+
+        b {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class='center'>
+    <center>
+        <h1 style="font-weight: 900;color:#f0ade8;">Email Flooder</h1>
+        <p>
+            <b>ONLY use this on emails you own.</b>
+            <br>
+            You must wait 20 minutes between requests.
+        </p>
+
+        <p style='color:red;display: none;margin-bottom: 0;' id='error'>❌
+            <a id='errtext'>None</a>
+            <br>
+            <br>
+        </p>
+        <p style='color:green;display: none;' id='success'>
+            ✅ Complete, took ≈<a id="time">582</a> seconds.
+            <br>Please wait 20 minutes before your next request 😄</p>
+        <p style='color:gray;display: none;' id='processing'><b>⚙ Processing request...</b>
+            <br>This will take about <a id="averageWait">43.2</a> seconds.</b>
+        </p>
+
+        <div class="input-group mb-3" id="emailinput">
+            <input type="email" id='email' class="form-control" placeholder="example@gmail.com"
+                   aria-label="example@gmail.com" aria-describedby="btn">
+            <button id='btn' onclick='generate();' type="button" class="btn btn-outline-primary">Flood!</button>
+        </div>
+
+        <!--<button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGateways"
+                aria-expanded="false" aria-controls="collapseExample">
+            Show Email-to-SMS Gateways
+        </button>
+        <br>
+        <div class="collapse" id="collapseGateways">
+            <div class="card card-body">
+                <p><b>Verizon</b>: @vtext.com<br>
+                <b>Alltel</b>: @message.alltel.com<br>
+                <b>AT&T</b>: @txt.att.net<br>
+                <b>T-Mobile</b>: @tmomail.net<br>
+                <b>Virgin Mobile</b>: @vmobl.com<br>
+                <b>Sprint</b>: @messaging.sprintpcs.com<br>
+                <b>Nextel</b>: @messaging.nextel.com<br>
+                <b>US Cellular</b>: @mms.uscc.net</p>
+            </div>
+        </div>
+        <br>-->
+
+        <p style='padding:0;margin:0;'><img src='assets/paypal.png'
+                                            style='vertical-align: middle;align-content: center;height:20px;'
+                                            alt="PayPal Logo"> <a href='https://paypal.me/foobball' target="_blank">paypal.me/foobball</a>
+        </p>
+        <p style='padding:0;margin:0;'><img src='assets/github.png'
+                                            style='vertical-align: middle;align-content: center;height:20px;'
+                                            alt="Github Logo"> <a href='https://github.com/foobball' target="_blank">github.com/foobball</a>
+        </p>
+    </center>
+</div>
+
+<script>
+    document.body.innerHTML = twemoji.parse(document.body.innerHTML);
+
+    const input = document.getElementById('email');
+    const errtext = document.getElementById('errtext');
+    const err = document.getElementById('error');
+    const suc = document.getElementById('success');
+    const btn = document.getElementById('btn');
+    const timeTaken = document.getElementById('time');
+    const processingText = document.getElementById('processing');
+    const inputGroup = document.getElementById('emailinput');
+
+    fetch('/speed')
+    .then(res => res.json())
+    .then(body => {
+        document.getElementById('averageWait').innerText = body.avg;
+    })
+
+    function generate() {
+        let agreeToTerms = sessionStorage.getItem('agree') || confirm(
+            `To continue to use this site, please agree to terms and conditions that\n` +
+            ` - The email I'm providing is my own.\n` +
+            ` - foob.tech has no responsibility in the problems this tool causes to my inbox.\n` +
+            ` - I will not bypass this site's restrictions\n` +
+            ` - I will not abuse this tool\n\n` +
+            // ` - My access to this site can be revoked at any time for any reason\n\n` +
+            `Select 'OK' or 'Confirm' if you agree to these terms\n` +
+            `Select 'Cancel' to leave foob.tech`
+        );
+
+        if (!agreeToTerms) return window.location = 'about:blank';
+        sessionStorage.setItem('agree', 'yes');
+
+        btn.disabled = true;
+        input.disabled = true;
+        err.style.display = 'none';
+        inputGroup.style.visibility = 'hidden';
+        processingText.style.display = 'block';
+        fetch('/flood?e=' + input.value)
+            .then(res => res.json())
+            .then(body => {
+                input.disabled = false;
+                btn.disabled = false;
+
+                processingText.style.display = 'none';
+
+                if (body.error) {
+                    err.style.display = 'block';
+                    suc.style.display = 'none';
+                    inputGroup.style.visibility = 'visible';
+                    return errtext.innerHTML = body.errorMsg;
+                }
+
+                inputGroup.style.display = 'none';
+                err.style.display = 'none';
+                errtext.innerText = 'None';
+                suc.style.display = 'block';
+                timeTaken.innerHTML = body.time;
+            })
+    }
+
+    input.addEventListener("keyup", (event) => {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            btn.click();
+        }
+    });
+</script>
+</body>
+
+</html>
