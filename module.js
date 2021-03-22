@@ -4,34 +4,34 @@ const consola = require('consola');
 const colors = require('colors');
 colors;
 
-// consola.success = () => {};
-// consola.info = () => {};
+consola.success = () => {};
+consola.info = () => {};
 
 const sites = {
     "crosswalk.com": (email => {
         fetch("https://allpass.salemwebnetwork.com/newsletters/fullsubmission?&emailAddress=" +
-                email.replace('@', '%40') + "&firstName=&lastName=&newsletters=4355%2C9944%2C8033%2C4273%2C10779%2C8172%2C10275%2C10117%2C8398%2C4269%2C7132%2C4263%2C6913%2C5132%2C8247%2C5043%2C4299%2C5063%2C8244%2C4374%2C11055%2C4664%2C5163%2C5047%2C5051%2C5166%2C5165%2C5167%2C4576%2C4297%2C4320%2C4285%2C4865%2C6972%2C4653%2C8787%2C5055%2C4283%2C4317%2C5168%2C4377%2C8183%2C4929%2C4759%2C4798%2C9365%2C4787%2C7512%2C4311%2C4395%2C4396%2C4549%2C4702%2C4590%2C5039%2C4708%2C5035%2C4808%2C4272%2C4289%2C8455%2C9014%2C8978%2C8630%2C8579%2C4288%2C4917%2C5160%2C4630%2C10356%2C4281%2C8132%2C10687%2C9913%2C10643%2C7065%2C7326%2C8063%2C8034%2C5027%2C7473%2C8070%2C4582%2C6762%2C9959%2C4392%2C5031%2C7469%2C4750%2C4779%2C8309%2C4601%2C5012%2C4541%2C6782%2C4906%2C4724%2C4537%2C4682%2C4545%2C10230%2C4900%2C4719%2C4712%2C4742%2C8235%2C4405%2C8249%2C5974%2C4642%2C4622%2C4516%2C8212%2C4376%2C4771%2C4398%2C4402%2C4399%2C5117%2C4394%2C4279%2C4913%2C4397%2C5128%2C8446%2C4303%2C8255%2C4605%2C8059%2C4290%2C4404%2C8239%2C4275%2C4557%2C4362%2C4564%2C8123%2C8075%2C4287%2C4885%2C8179%2C4597%2C4738%2C8175%2C8165%2C4291%2C8464&signupLocation=Newsletter%20Page&signupDomain=www.crosswalk.com&signupUrl=%2Fnewsletters%2F&signupPage=2&screen=1360&callback=jQuery111006821587697244988_1616090897561&_=1616090897562", {
-                    "headers": {
-                        "accept": "*/*",
-                        "accept-language": "en-US,en;q=0.9",
-                        "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
-                        "sec-ch-ua-mobile": "?0",
-                        "sec-fetch-dest": "script",
-                        "sec-fetch-mode": "no-cors",
-                        "sec-fetch-site": "cross-site"
-                    },
-                    "referrer": "https://www.crosswalk.com/",
-                    "referrerPolicy": "strict-origin-when-cross-origin",
-                    "body": null,
-                    "method": "GET",
-                    "mode": "cors"
-                })
+            email.replace('@', '%40') + "&firstName=&lastName=&newsletters=4355%2C9944%2C8033%2C4273%2C10779%2C8172%2C10275%2C10117%2C8398%2C4269%2C7132%2C4263%2C6913%2C5132%2C8247%2C5043%2C4299%2C5063%2C8244%2C4374%2C11055%2C4664%2C5163%2C5047%2C5051%2C5166%2C5165%2C5167%2C4576%2C4297%2C4320%2C4285%2C4865%2C6972%2C4653%2C8787%2C5055%2C4283%2C4317%2C5168%2C4377%2C8183%2C4929%2C4759%2C4798%2C9365%2C4787%2C7512%2C4311%2C4395%2C4396%2C4549%2C4702%2C4590%2C5039%2C4708%2C5035%2C4808%2C4272%2C4289%2C8455%2C9014%2C8978%2C8630%2C8579%2C4288%2C4917%2C5160%2C4630%2C10356%2C4281%2C8132%2C10687%2C9913%2C10643%2C7065%2C7326%2C8063%2C8034%2C5027%2C7473%2C8070%2C4582%2C6762%2C9959%2C4392%2C5031%2C7469%2C4750%2C4779%2C8309%2C4601%2C5012%2C4541%2C6782%2C4906%2C4724%2C4537%2C4682%2C4545%2C10230%2C4900%2C4719%2C4712%2C4742%2C8235%2C4405%2C8249%2C5974%2C4642%2C4622%2C4516%2C8212%2C4376%2C4771%2C4398%2C4402%2C4399%2C5117%2C4394%2C4279%2C4913%2C4397%2C5128%2C8446%2C4303%2C8255%2C4605%2C8059%2C4290%2C4404%2C8239%2C4275%2C4557%2C4362%2C4564%2C8123%2C8075%2C4287%2C4885%2C8179%2C4597%2C4738%2C8175%2C8165%2C4291%2C8464&signupLocation=Newsletter%20Page&signupDomain=www.crosswalk.com&signupUrl=%2Fnewsletters%2F&signupPage=2&screen=1360&callback=jQuery111006821587697244988_1616090897561&_=1616090897562", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "script",
+                "sec-fetch-mode": "no-cors",
+                "sec-fetch-site": "cross-site"
+            },
+            "referrer": "https://www.crosswalk.com/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": null,
+            "method": "GET",
+            "mode": "cors"
+        })
             .then(() => {
-                // // consola.success('Signed up for https://www.crosswalk.com/newsletters/');
+                // consola.success('Signed up for https://www.crosswalk.com/newsletters/');
             }).catch(err => {
-                // // consola.info('An error occurred while signing up for https://www.crosswalk.com/newsletters/');
-                // consola.error(err);
-            });
+            consola.info('An error occurred while signing up for https://www.crosswalk.com/newsletters/');
+            consola.error(err);
+        });
     }),
     "outsideonline.com": (email => {
         fetch("https://api.sail-track.com/v1/track/user/signup", {
@@ -56,11 +56,11 @@ const sites = {
             return res.json();
         }).then(body => {
             if (body.sailthruHid) {
-                // return // consola.success('Signed up for https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup');
+                return consola.success('Signed up for https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup');
             }
-            // // consola.info('Couldn\'t sign up for https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup');
+            consola.info('Couldn\'t sign up for https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup');
         }).catch(() => {
-            // // consola.info('Couldn\'t sign up for https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup');
+            consola.info('Couldn\'t sign up for https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup');
         });
     }),
     "link.wgal.com": (async email => {
@@ -84,7 +84,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // // consola.success('Signed up for https://link.wgal.com/join/5e3/signin');
+        consola.success('Signed up for https://link.wgal.com/join/5e3/signin');
     }),
     "link.wcvb.com": (async email => {
         await fetch("http://link.wcvb.com/manage/5e0/optout?email=" + email, {
@@ -101,32 +101,122 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://link.wcvb.com/join/5e3/signin');
+        consola.success('Signed up for https://link.wcvb.com/join/5e3/signin');
     }),
-    "nbcboston.com/newsletters/": (async email => {
-        let hostname = 'nbcboston.com';
-        await fetch("https://www." + hostname + "/wp-json/nbc/v1/subscriber/update/?_locale=user", {
+    "nbcmiami.com/newsletters/": (async email => {
+        await fetch("https://www.nbcmiami.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
+            "headers": {
+                "accept": "application/json, */*;q=0.1",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://www.nbcmiami.com/newsletters/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WTVJ_coronavirus\":1,\"WTVJ_BreakingNews\":1,\"WTVJ_News7am\":1,\"WTVJ_NewsNoon\":1,\"WTVJ_News8pm\":1,\"WTVJ_Weather\":1,\"WTVJ_Sports\":1,\"WTVJ_Entertainment\":1,\"WTVJ_Contests\":1}}",
+            "method": "POST",
+            "mode": "cors"
+        });
+        consola.success('Signed up for https://www.nbcmiami.com/newsletters/');
+    }),
+    "foxnews.com/newsletters": (async email => {
+        const subscribe = async slid => {
+            return await fetch("https://www.foxnews.com/portal/newsalertsubscribe", {
                 "headers": {
-                    "accept": "application/json, */*;q=0.1",
+                    "accept": "*/*",
                     "accept-language": "en-US,en;q=0.9",
-                    "content-type": "application/json",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                     "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
                     "sec-ch-ua-mobile": "?0",
                     "sec-fetch-dest": "empty",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-site": "same-origin",
-                    "x-wp-nonce": "9f4456487d",
-                    "cookie": "s_ppvl=%5B%5BB%5D%5D; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=-1176276602%7CMCIDTS%7C18705%7CMCMID%7C18762268474502337082463476467281272068; s_ppv=https%253A%2F%2Fwww." + hostname + "%2Fnewsletters%2F%2C100%2C85%2C1367%2C750%2C667%2C1360%2C768%2C1%2CL"
+                    "x-requested-with": "XMLHttpRequest"
                 },
-                "referrer": "https://www." + hostname + "/newsletters/",
+                "referrer": "https://www.foxnews.com/newsletters",
                 "referrerPolicy": "strict-origin-when-cross-origin",
-                "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WBTS_coronavirus\":1,\"WBTS_BreakingNews\":1,\"WBTS_News7am\":1,\"WBTS_NewsNoon\":1,\"WBTS_News5pm\":1,\"WBTS_News11pm\":1,\"WBTS_Weather\":1,\"WBTS_Entertainment\":1,\"WBTS_Investigations\":1,\"WBTS_Contests\":1}}",
+                "body": "email=" + email.replace('@', '%40') + "&slids=" + slid,
                 "method": "POST",
                 "mode": "cors"
-            })
-            // consola.success('Signed up for https://www.' + hostname + '/newsletters/');
+            })//.then(res => res.json()).then(console.log);
+        }
+
+        await subscribe('3DC725E303A24F8D7457D18811A93C18');
+        await subscribe('3DC725E303A24F8D106D04335B030A1E');
+        await subscribe('3DC725E303A24F8DBA8D7ED90EFD2033');
+        await subscribe('3DC725E303A24F8DE8DB8BD2CA76E43D');
+        await subscribe('3DC725E303A24F8DB2CE37CF687DE56B');
+        await subscribe('3DC725E303A24F8D2F397E652DAD2AE6');
+        await subscribe('3DC725E303A24F8D8BF986F69AEAACEA');
+        await subscribe('3DC725E303A24F8D0E2C21B39073C09B');
+        await subscribe('3DC725E303A24F8D10BFA69067B1CAC9');
+
+        await fetch("https://www.foxnews.com/portal/newsalertsubscribe?type=foxnation", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+            },
+            "referrer": "https://www.foxnews.com/newsletters",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"email\":\"" + email + "\",\"campaign\":\"fox-nation\",\"url\":\"https://www.foxnews.com/newsletters\"}",
+            "method": "POST",
+            "mode": "cors"
+        });
+    }),
+    "https://cbsnews.com/newsletters": (async email => {
+        await fetch("https://www.cbsnews.com/newsletters/xhr/signup", {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "text/plain",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://www.cbsnews.com/newsletters/widget?v=4303070594ae09e4278f40f24f771b58&subs=e889%2Ce881%2Ce882%2Ce879%2Ce883%2Ce884%2Ce241",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"email\":\"" + email + "\",\"sub\":\"e889,e881,e882,e879,e883,e884,e241\"}",
+            "method": "POST",
+            "mode": "cors"
+        });
+    }),
+    "nbcboston.com/newsletters/": (async email => {
+        // FIXED AND UPDATED
+        await fetch("https://www.nbcboston.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
+            "headers": {
+                "accept": "application/json, */*;q=0.1",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://www.nbcboston.com/newsletters/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WBTS_coronavirus\":1,\"WBTS_BreakingNews\":1,\"WBTS_News7am\":1,\"WBTS_NewsNoon\":1,\"WBTS_News5pm\":1,\"WBTS_News11pm\":1,\"WBTS_Weather\":1,\"WBTS_Entertainment\":1,\"WBTS_Investigations\":1,\"WBTS_Contests\":1}}",
+            "method": "POST",
+            "mode": "cors",
+            "credentials": "omit"
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcboston.com/newsletters/');
     }),
     "nbcnewyork.com/newsletters/": (async email => {
+        // PROB WORKING
         await fetch("https://www.nbcnewyork.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
             "headers": {
                 "accept": "application/json, */*;q=0.1",
@@ -136,18 +226,18 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcnewyork.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WNBC_News7am\":1,\"WNBC_News11pm\":1,\"WNBC_Contests\":1,\"WNBC_BreakingNews\":1,\"WNBC_Weather\":1,\"WNBC_Olympics\":1}}",
             "method": "POST",
             "mode": "cors"
-        });
-        // consola.success('Signed up for https://www.nbcnewyork.com/newsletters/');
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcnewyork.com/newsletters/');
     }),
     "nbcchicago.com/newsletters/": (async email => {
+        // PROB WORKING
         await fetch("https://www.nbcchicago.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
             "headers": {
                 "accept": "application/json, */*;q=0.1",
@@ -157,18 +247,18 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcchicago.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WMAQ_coronavirus\":1,\"WMAQ_News7am\":1,\"WMAQ_Noon\":1,\"WMAQ_News8pm\":1,\"WMAQ_BreakingNews\":1,\"WMAQ_Weather\":1,\"WMAQ_Sports\":1,\"WMAQ_Entertainment\":1,\"WMAQ_Contests\":1,\"WMAQ_Olympics\":1}}",
             "method": "POST",
             "mode": "cors"
-        });
-        // consola.success('Signed up for https://www.nbcchicago.com/newsletters/');
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcchicago.com/newsletters/');
     }),
     "nbcbayarea.com/newsletters/": (async email => {
+        // PROB WORKING
         await fetch("https://www.nbcbayarea.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
             "headers": {
                 "accept": "application/json, */*;q=0.1",
@@ -178,17 +268,15 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d",
-                "cookie": "AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=-1176276602%7CMCIDTS%7C18705; s_ppvl=%5B%5BB%5D%5D; s_ppv=https%253A%2F%2Fwww.nbcbayarea.com%2Fnewsletters%2F%2C42%2C77%2C1267%2C664%2C667%2C1360%2C768%2C1%2CP"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcbayarea.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"kntv_coronavirus\":1,\"KNBC_News7am\":1,\"KNBC_NewsNoon\":1,\"KNBC_News5pm\":1,\"KNBC_BreakingNews\":1,\"KNBC_Weather\":1,\"KNBC_Sports\":1,\"KNBC_Entertainment\":1,\"KNBC_Contests\":1,\"KNBC_Olympics\":1}}",
             "method": "POST",
             "mode": "cors"
-        });
-        // consola.success('Signed up for https://www.nbcbayarea.com/newsletters/');
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcbayarea.com/newsletters/');
     }),
     "nbclosangeles.com/newsletters/": (async email => {
         await fetch("https://www.nbclosangeles.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
@@ -200,16 +288,15 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbclosangeles.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"KNBC_News7am\":1,\"KNBC_NewsNoon\":1,\"KNBC_News5pm\":1,\"KNBC_BreakingNews\":1,\"KNBC_Weather\":1,\"KNBC_Sports\":1,\"KNBC_Entertainment\":1,\"KNBC_Contests\":1,\"KNBC_Olympics\":1}}",
             "method": "POST",
             "mode": "cors"
-        });
-        // consola.success('Signed up for https://www.nbclosangeles.com/newsletters/');
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbclosangeles.com/newsletters/');
     }),
     "nbcsandiego.com/newsletters/": (async email => {
         await fetch("https://www.nbcsandiego.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
@@ -221,17 +308,15 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcsandiego.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"KNSD_coronavirus\":1,\"KNSD_News7am\":1,\"KNSD_NewsNoon\":1,\"KNSD_News6pm\":1,\"KNSD_BreakingNews\":1,\"KNSD_Weather\":1,\"KNSD_Sports\":1,\"KNSD_TheScene\":1,\"KNSD_Contests\":1,\"KNSD_SoundDiego\":1,\"KNSD_SoundDiegoPlatinum\":1,\"KNSD_WorthTheTrip\":1}}",
             "method": "POST",
-            "mode": "cors",
-            "credentials": "include"
-        });
-        // consola.success('Signed up for https://www.nbcsandiego.com/newsletters/');
+            "mode": "cors"
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcsandiego.com/newsletters/');
     }),
     "nbcconnecticut.com/newsletters/": (async email => {
         await fetch("https://www.nbcconnecticut.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
@@ -243,17 +328,15 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d",
-                "cookie": "AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=-1176276602%7CMCIDTS%7C18705; s_ppvl=%5B%5BB%5D%5D; s_ppv=https%253A%2F%2Fwww.nbcconnecticut.com%2Fnewsletters%2F%2C43%2C87%2C1367%2C664%2C667%2C1360%2C768%2C1%2CP"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcconnecticut.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WVIT_coronavirus\":1,\"WVIT_News7am\":1,\"WVIT_NewsNoon\":1,\"WVIT_News8p\":1,\"WVIT_BreakingNews\":1,\"WVIT_Weather\":1,\"WVIT_Contest\":1,\"WVIT_Entertainment\":1,\"WVIT_Olympics\":1}}",
             "method": "POST",
             "mode": "cors"
-        });
-        // consola.success('Signed up for https://www.nbcconnecticut.com/newsletters/');
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcconnecticut.com/newsletters/');
     }),
     "nbcwashington.com/newsletters/": (async email => {
         await fetch("https://www.nbcwashington.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
@@ -265,17 +348,15 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcwashington.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WRC_coronavirus\":1,\"WRC_News7am\":1,\"WRC_NewsNoon\":1,\"WRC_News8pm\":1,\"WRC_Olympics\":1,\"WRC_BreakingNews\":1,\"WRC_Contests\":1,\"WRC_Sports\":1,\"WRC_Entertainment\":1,\"WRC_Weather\":1}}",
             "method": "POST",
-            "mode": "cors",
-            "credentials": "include"
-        });
-        // consola.success('Signed up for https://www.nbcwashington.com/newsletters/');
+            "mode": "cors"
+        })//.then(res => res.json()).then(console.log);
+        consola.success('Signed up for https://www.nbcwashington.com/newsletters/');
     }),
     "nbcdfw.com/newsletters/": (async email => {
         await fetch("https://www.nbcdfw.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
@@ -289,15 +370,14 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-wp-nonce": "9f4456487d",
-                "cookie": "AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_ppvl=%5B%5BB%5D%5D; s_ppv=https%253A%2F%2Fwww.nbcdfw.com%2Fnewsletters%2F%2C44%2C100%2C1629%2C664%2C667%2C1360%2C768%2C1%2CLP; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=-1176276602%7CMCIDTS%7C18705%7CMCMID%7C54062411166253792013078203019419095612%7CMCAID%7CNONE%7CMCOPTOUT-1616114845s%7CNONE; nbcu_prepagename=newsletters%3Anewsletters%20landing%3Asection%20landing%20page; SC_LINKS=%5B%5BB%5D%5D; s_vnum=1617249600963%26vn%3D1; s_invisit=true; nbcu_dayslastvisit=1616107645964; nbcu_dayslastvisit_s=First%20Visit; s_cc=true; s_nr=1616107902900-New; s_sq=nbcuotsdivisiontotal%3D%2526pid%253Dnewsletters%25253Anewsletters%252520landing%25253Asection%252520landing%252520page%2526pidt%253D1%2526oid%253DSave%252520Changes%2526oidt%253D3%2526ot%253DSUBMIT"
             },
             "referrer": "https://www.nbcdfw.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"KXAS_coronavirus\":1,\"KXAS_News7am\":1,\"KXAS_NewsNoon\":1,\"KXAS_News8pm\":1,\"KXAS_BreakingNews\":1,\"KXAS_Weather\":1,\"KXAS_Entertainment\":1,\"KXAS_Announcements\":1,\"KXAS_Investigations\":1,\"KXAS_Contests\":1}}",
             "method": "POST",
             "mode": "cors"
-        });
-        return // consola.success('Signed up for https://www.nbcdfw.com/newsletters/');
+        })//.then(res => res.json()).then(console.log);
+        return consola.success('Signed up for https://www.nbcdfw.com/newsletters/');
     }),
     "nbcphiladelphia.com/newsletters/": (async email => {
         await fetch("https://www.nbcphiladelphia.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
@@ -309,17 +389,15 @@ const sites = {
                 "sec-ch-ua-mobile": "?0",
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-wp-nonce": "9f4456487d"
+                "sec-fetch-site": "same-origin"
             },
             "referrer": "https://www.nbcphiladelphia.com/newsletters/",
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "{\"email\":\"" + email + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{\"WCAU_wawa\":1,\"WCAU_News7am\":1,\"WCAU_NewsNoon\":1,\"WCAU_News8pm\":1,\"WCAU_BreakingNews\":1,\"WCAU_Weather\":1,\"WCAU_Sports\":1,\"WCAU_Entertainment\":1,\"WCAU_Olympics\":1,\"WCAU_Contests\":1,\"WCAU_Announcements\":1}}",
             "method": "POST",
-            "mode": "cors",
-            "credentials": "include"
-        });
-        return // consola.success('Signed up for https://www.nbcphiladelphia.com/newsletters/');
+            "mode": "cors"
+        })//.then(res => res.json()).then(console.log);
+        return consola.success('Signed up for https://www.nbcphiladelphia.com/newsletters/');
     }),
     "http://link.msnbc.com/join/5ck/msnbc-updates-signup": (async email => {
         await fetch("http://link.msnbc.com/join/5ck/msnbc-updates-signup", {
@@ -329,7 +407,6 @@ const sites = {
                 "cache-control": "max-age=0",
                 "content-type": "application/x-www-form-urlencoded",
                 "upgrade-insecure-requests": "1",
-                "cookie": "AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_vnum=1618686145030%26vn%3D1; s_invisit=true; s_cc=true; prevVal_pn=msnbc%3Aemail%3ASign%20up%20for%20the%20Show%20Updates%2C%20Special%20Events%20%26%20Offers%20newsletter%20%7C%20NBC%20News; s_sq=msnbcdotcom%3D%2526c.%2526a.%2526activitymap.%2526page%253Dmsnbc%25253Aemail%25253ASign%252520up%252520for%252520the%252520Show%252520Updates%25252C%252520Special%252520Events%252520%252526%252520Offers%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dmsnbc%25253Aemail%25253ASign%252520up%252520for%252520the%252520Show%252520Updates%25252C%252520Special%252520Events%252520%252526%252520Offers%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C19498945692468480643899592547967251642%7CMCAID%7CNONE%7CMCOPTOUT-1616102058s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "http://link.msnbc.com/join/5ck/msnbc-updates-signup&hash=37d894cccdf4b3f89cc88dac8272a18b",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -337,7 +414,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for http://link.msnbc.com/join/5ck/msnbc-updates-signup');
+        consola.success('Signed up for http://link.msnbc.com/join/5ck/msnbc-updates-signup');
     }),
     "contacts.nbc.ca": (async email => {
         await fetch("https://www.contacts.nbc.ca/newsletter/subscription?vs=OTZkNmNiNTktOTg2NS00ZWI4LWIzOTQtZjkwNTM1YTA1YzdlOzsS1", {
@@ -358,10 +435,9 @@ const sites = {
             "referrerPolicy": "strict-origin-when-cross-origin",
             "body": "surname=AAAAA&givenName=BBBBB&Email=" + email.replace('@', '%40') + "&ConfirmEmail=" + email.replace('@', '%40') + "&languageCode=En&Finance_banking=1&Investment_stock=1&Business_world=1&Int_BNC_Daily_FX=1&Int_BNC_Hebdo_Economique=1&Int_BNC_Hebdo_Energy=1&Courtage_direct=1&Accept_Politique=1&Accept_Infolettre=1&g-recaptcha-response=03AGdBq269E4DK-OLXEG4AyE-dp7JW835RpoVkWwQD8pWyTCt3oxUYf57pNe9qAcYiEUOfRPMZI78hlvTcNwaAb1qwrbuqzcAQ6tTDote8DxG8izH9ojeKLoMGXPfaVHd89gbZNinJyZtdjeinRCyFq0FQO62GmSuy8-CsAEC64NSEHIoxs-4pVDnZElguZ-6pGoPQbd-oq_XO985wpQfTvTKIZVgj96sp0UvzL6ycSy0YVUJaMYJV8B6bCuj25TYwGpnMg5DcmCfoHiKBrjwRQVwMNO23lW9V_UxWscZJpqqYrZoOsZmvEQt0-gJsVJ9YVgtEotE_tc_sCmzQzuZCHHEcAaMeh3os2D_o_WwmcF3talIRGFOeDkudbrQ3WMU3MhBsS5P8p0-CCwQTcy3c5hhdRLgD9oBj_it3k4NcwFPkTcVCLeAQ9BuCpeAdMVHNdlj7V9KftOfZLzMEzFH-N0VOuKAXAxgwPA&confirmer=Confirm&notificationId=368486&templtPurpsCd=NewsLetter&formSourceName=StandardForm&sp_exp=yes",
             "method": "POST",
-            "mode": "cors",
-            "credentials": "include"
+            "mode": "cors"
         });
-        // consola.success('Signed up for https://www.contacts.nbc.ca/newsletter/subscription');
+        consola.success('Signed up for https://www.contacts.nbc.ca/newsletter/subscription');
     }),
     "nbc15.com": (async email => {
         await fetch("https://api.secondstreetapp.com/form_page_submissions", {
@@ -383,7 +459,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://www.nbc15.com/newsletter/');
+        consola.success('Signed up for https://www.nbc15.com/newsletter/');
     }),
     "covid19updates": (async email => {
         await fetch("https://confirmsubscription.com/t/t/HostedSubscribeForm/yhhrtly", {
@@ -403,7 +479,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://confirmsubscription.com/h/t/6925B3D1925FFCCF');
+        consola.success('Signed up for https://confirmsubscription.com/h/t/6925B3D1925FFCCF');
     }),
     "cervical": (async email => {
         await fetch("https://confirmsubscription.com/t/d/HostedSubscribeForm/jrdkkkk", {
@@ -423,7 +499,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://confirmsubscription.com/h/d/111B22A75495D78E');
+        consola.success('Signed up for https://confirmsubscription.com/h/d/111B22A75495D78E');
     }),
     "nbcstuff": (async email => {
         const encodedEmail = email.replace('@', '%40');
@@ -440,7 +516,6 @@ const sites = {
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
-                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20The%20Nightly%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520The%252520Nightly%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520The%252520Nightly%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128428s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "https://link.nbcnews.com/join/5cj/the-nightly-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -461,7 +536,6 @@ const sites = {
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
-                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20Breaking%20News%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Breaking%252520News%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Breaking%252520News%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128508s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "https://link.nbcnews.com/join/5cj/breaking-news-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -476,7 +550,6 @@ const sites = {
                 "cache-control": "max-age=0",
                 "content-type": "application/x-www-form-urlencoded",
                 "upgrade-insecure-requests": "1",
-                "cookie": "AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20First%20Read%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520First%252520Read%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520First%252520Read%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128521s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "http://link.nbcnews.com/join/5cj/first-read-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -497,7 +570,6 @@ const sites = {
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
-                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20Dateline%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Dateline%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Dateline%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128533s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "https://link.nbcnews.com/join/5cj/dateline-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -518,7 +590,6 @@ const sites = {
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
-                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20THINK%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520THINK%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520THINK%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128548s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "https://link.nbcnews.com/join/5cj/think-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -539,7 +610,6 @@ const sites = {
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
-                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20BETTER%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520BETTER%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520BETTER%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128560s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "https://link.nbcnews.com/join/5cj/better-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -560,7 +630,6 @@ const sites = {
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?1",
                 "upgrade-insecure-requests": "1",
-                "cookie": "nbcnews_geolocation=us; AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20MACH%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520MACH%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520MACH%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128574s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "https://link.nbcnews.com/join/5cj/mach-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -575,7 +644,6 @@ const sites = {
                 "cache-control": "max-age=0",
                 "content-type": "application/x-www-form-urlencoded",
                 "upgrade-insecure-requests": "1",
-                "cookie": "AMCVS_A8AB776A5245B4220A490D44%40AdobeOrg=1; s_cc=true; s_vnum=1618686811025%26vn%3D3; s_invisit=true; prevVal_pn=nbcnews%3Aemail%3ASign%20up%20for%20the%20Byers%20Market%20newsletter%20%7C%20NBC%20News; s_sq=msnbcnbcnewscomprod%3D%2526c.%2526a.%2526activitymap.%2526page%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Byers%252520Market%252520newsletter%252520%25257C%252520NBC%252520News%2526link%253DSIGN%252520UP%2526region%253DBODY%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253Dnbcnews%25253Aemail%25253ASign%252520up%252520for%252520the%252520Byers%252520Market%252520newsletter%252520%25257C%252520NBC%252520News%2526pidt%253D1%2526oid%253DSIGN%252520UP%2526oidt%253D3%2526ot%253DSUBMIT; AMCV_A8AB776A5245B4220A490D44%40AdobeOrg=1585540135%7CMCIDTS%7C18705%7CMCMID%7C26640795055904772270498382228344527217%7CMCAID%7CNONE%7CMCOPTOUT-1616128591s%7CNONE%7CvVersion%7C4.4.0"
             },
             "referrer": "http://link.nbcnews.com/join/5cj/byers-market-signup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -583,7 +651,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://www.msnbc.com/newsletters');
+        consola.success('Signed up for https://www.msnbc.com/newsletters');
     }),
     "nbc26.com": (async email => {
         await fetch("https://api.ewscloud.com/prod/notifications/v1/wgba/contactlists/subscribe/", {
@@ -604,7 +672,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://www.nbc26.com/account/manage-email-preferences');
+        consola.success('Signed up for https://www.nbc26.com/account/manage-email-preferences');
     }),
     "msn.com": (async email => {
         await fetch("https://www.msn.com/en-us/SubscribeUser?topics=MSNToday,BestofMSN,msnusernurturing&email=" + email + "&ver=20210314_19444127", {
@@ -617,7 +685,6 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "anoncknm=; _EDGE_S=F=1; _EDGE_V=1; MUID=32B767F2E79263741B82680DE62562C3"
             },
             "referrer": "https://www.msn.com/en-us/newslettersignup",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -625,7 +692,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://www.msn.com/en-us/newslettersignup');
+        consola.success('Signed up for https://www.msn.com/en-us/newslettersignup');
     }),
     "cbssports.com": (async email => {
         const encodedEmail = email.replace('@', '%40');
@@ -640,7 +707,6 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178219944$ses_id:1616176414896%3Bexp-session$_pn:3%3Bexp-session; _BB.d=0|||3; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A53%3A40+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:53:40.646Z"
             },
             "referrer": "https://www.cbssports.com/newsletters/cbs-sports-hq/",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -659,7 +725,6 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178265238$ses_id:1616176414896%3Bexp-session$_pn:4%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A54%3A25+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:54:25.371Z; _BB.d=0|||4"
             },
             "referrer": "https://www.cbssports.com/newsletters/pick-six/",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -678,7 +743,6 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178276518$ses_id:1616176414896%3Bexp-session$_pn:5%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A54%3A36+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:54:36.614Z; _BB.d=0|||5"
             },
             "referrer": "https://www.cbssports.com/newsletters/fantasy-football-today/",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -697,7 +761,6 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178290561$ses_id:1616176414896%3Bexp-session$_pn:6%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A54%3A50+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:54:50.669Z; _BB.d=0|||6"
             },
             "referrer": "https://www.cbssports.com/newsletters/fantasy-baseball-today/",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -716,7 +779,6 @@ const sites = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "fly_device=desktop; fly_geo={\"countryCode\":\"us\",\"region\":\"va\"}; fly_ab=5ab85d4f-9e4a-45b6-9b8f-5f26c7dcf9b4; _BB.bs=f|1; utag_main=v_id:01784b9f00af0004a8b590b8542503072003406a00868$_sn:1$_ss:0$_st:1616178302463$ses_id:1616176414896%3Bexp-session$_pn:7%3Bexp-session; OptanonConsent=isIABGlobal=false&datestamp=Fri+Mar+19+2021+13%3A55%3A02+GMT-0400+(Eastern+Daylight+Time)&version=6.12.0&hosts=&consentId=c5373cab-c453-4b66-8adb-dce74cc87f2f&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C5%3A1&AwaitingReconsent=false&geolocation=US%3BVA; OptanonAlertBoxClosed=2021-03-19T17:55:02.605Z; _BB.d=0|||7"
             },
             "referrer": "https://www.cbssports.com/newsletters/the-first-cut/",
             "referrerPolicy": "strict-origin-when-cross-origin",
@@ -724,17 +786,47 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
-        // consola.success('Signed up for https://www.cbssports.com/newsletters/cbs-sports-hq/');
+        consola.success('Signed up for https://www.cbssports.com/newsletters/cbs-sports-hq/');
+    }),
+    "donotpay.com": (async email => {
+        await fetch('https://donotpay.com/login?email=' + email.replace('@', '%40'));
+        consola.success('Signed up for https://donotpay.com/login?email=');
     })
 }
 
 const floodall = async enteredEmail => {
+    // Creates NBC Profile
+    await fetch("https://www.nbcphiladelphia.com/wp-json/nbc/v1/subscriber/update/?_locale=user", {
+        "headers": {
+            "accept": "application/json, */*;q=0.1",
+            "accept-language": "en-US,en;q=0.9",
+            "content-type": "application/json",
+            "sec-ch-ua": "\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "x-wp-nonce": "5669cc7383"
+        },
+        "referrer": "https://www.nbcphiladelphia.com/newsletters/",
+        "referrerPolicy": "strict-origin-when-cross-origin",
+        "body": "{\"email\":\"" + enteredEmail + "\",\"fname\":\"AAAAAA\",\"lname\":\"BBBBBB\",\"zip\":\"22222\",\"sex\":\"female\",\"lists\":{}}",
+        "method": "POST",
+        "mode": "cors",
+        "credentials": "omit"
+    });
+
+    let amountOfSites = 0;
     for (const key in sites) {
+        amountOfSites++;
         await sites[key](enteredEmail);
     }
+
+    return amountOfSites;
+
 }
 
-const start = async() => {
+const start = async () => {
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
