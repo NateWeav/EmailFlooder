@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-    <meta property="og:title" content="Email Flooder"/>
+    <meta property="og:title" content="Foob's Flooder"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://foob.tech/"/>
-    <!--    <meta property="og:image" content="https://ssl.gstatic.com/images/branding/product/2x/hh_drive_96dp.png" />-->
-    <meta property="og:description" content="Floods your email with newsletters."/>
+    <meta property="og:image" content="https://twemoji.maxcdn.com/v/13.0.2/72x72/1f4e7.png"/>
+    <meta property="og:description" content="Flood your email or phone with messages!"/>
     <meta name="theme-color" content="#FFBFF8">
 
-    <title>Email Flooder</title>
+    <title>Foob's Flooder</title>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZKEXMH48J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LZKEXMH48J');
+    </script>
+
+    <link rel="icon"
+          type="image/png"
+          href="https://twemoji.maxcdn.com/v/13.0.2/72x72/1f4e7.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
@@ -34,8 +46,8 @@
             width: 90%;
             position: absolute;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            top: 70px;
+            transform: translate(-50%, -50px);
             text-align: center;
         }
 
@@ -81,64 +93,96 @@
             display: inline-block;
         }
 
+        .card-body {
+            max-width: 400px;
+        }
     </style>
 </head>
 
 <body>
 <div class='center'>
     <center>
-        <h1 style="font-weight: 900;color:#f0ade8;">Email Flooder</h1>
-        <p>
-            <b>ONLY use this on emails you own.</b>
-            <br>
-            You must wait 20 minutes between requests.
-        </p>
+        <div class="collapse show header" id="collapseHeader">
+            <div class="card card-body">
+                <h1 style="font-weight: 900;color:#f0ade8;">
+                    <img src="https://cdn.discordapp.com/avatars/219541416760705024/d31d7e6fdf37994689584e704d930d46.png?size=1024"
+                         style='vertical-align: middle;align-content: center;height:50px;transform: translateY(-8px)'
+                         alt="Ko-Fi Logo"> Foob's Flooder</h1>
+                <p>
+                <h2>⚠</h2> <b>ONLY USE THIS ON EMAILS YOU OWN OR HAVE CONSENT TO FLOOD.</b>
+                    <br>
+                </p>
 
-        <p style='color:red;display: none;margin-bottom: 0;' id='error'>❌
-            <a id='errtext'>None</a>
-            <br>
-            <br>
-        </p>
-        <p style='color:green;display: none;' id='success'>
-            ✅ Complete, took ≈<a id="time">582</a> seconds.
-            <br>Please wait 20 minutes before your next request 😄</p>
-        <p style='color:gray;display: none;' id='processing'><b>⚙ Processing request...</b>
-            <br>This will take about <a id="averageWait">43.2</a> seconds.</b>
-        </p>
-
-        <div class="input-group mb-3" id="emailinput">
-            <input type="email" id='email' class="form-control" placeholder="example@gmail.com"
-                   aria-label="example@gmail.com" aria-describedby="btn">
-            <button id='btn' onclick='generate();' type="button" class="btn btn-outline-primary">Flood!</button>
+                <p style='color:red;display: none;margin-bottom: 0;' id='error'>❌
+                    <a id='errtext'>None</a>
+                    <br>
+                    <br>
+                </p>
+                <p style='color:green;display: none;' id='success'>
+                    ✅ <b>Complete!</b><br>Took <a id="time">idk</a> seconds for <a id="reqAmount">40</a> forms.
+                    <br><br>
+                    <button type="button" class="btn btn-outline-primary" onclick="location.reload()">
+                        <b>Submit Another</b>
+                    </button>
+                    <!--<br>Please wait 20 minutes before your next request 😄--></p>
+                <p style='color:gray;display: none;' id='processing'><b>⚙ Processing request...</b>
+                    <br>This will take about <a id="averageWait">43</a> seconds
+                </p>
+                <center>
+                    <div class="input-group mb-3" id="emailinput">
+                        <input autocomplete="off" type="email" id='email' class="form-control"
+                               placeholder="example@gmail.com"
+                               aria-label="example@gmail.com" aria-describedby="btn">
+                        <button id='btn' onclick='generate();' type="button" class="btn btn-outline-primary">
+                            <b>Flood</b></button>
+                    </div>
+                </center>
+            </div>
         </div>
+        <br>
 
         <!--<button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGateways"
                 aria-expanded="false" aria-controls="collapseExample">
-            Show Email-to-SMS Gateways
-        </button>
-        <br>
-        <div class="collapse" id="collapseGateways">
+            Display Email-to-SMS Gateways
+        </button>-->
+        <div class="collapse show gateways" id="collapseGateways">
             <div class="card card-body">
-                <p><b>Verizon</b>: @vtext.com<br>
-                <b>Alltel</b>: @message.alltel.com<br>
-                <b>AT&T</b>: @txt.att.net<br>
-                <b>T-Mobile</b>: @tmomail.net<br>
-                <b>Virgin Mobile</b>: @vmobl.com<br>
-                <b>Sprint</b>: @messaging.sprintpcs.com<br>
-                <b>Nextel</b>: @messaging.nextel.com<br>
-                <b>US Cellular</b>: @mms.uscc.net</p>
+                <h4 style="color:#f0ade8;">🗨 Email-to-SMS Gateways</h4>
+                <p style="margin-bottom: 0;text-align: left;margin-left: 10px;">
+                    <b>Verizon</b>: @vtext.com<br>
+                    <b>AT&T</b>: @txt.att.net<br>
+                    <b>T-Mobile</b>: @tmomail.net<br>
+                    <b>Sprint</b>: @messaging.sprintpcs.com<br>
+                    <b>Alltel</b>: @message.alltel.com<br>
+                    <b>Virgin Mobile</b>: @vmobl.com<br>
+                    <b>Nextel</b>: @messaging.nextel.com<br>
+                    <b>US Cellular</b>: @mms.uscc.net
+                </p>
+            </div>
+            <br>
+        </div>
+
+        <div class="collapse show support" id="collapseSupport">
+            <div class="card card-body">
+                <h4 style="color:#f0ade8;">💰 Support Me</h4>
+                <p style='padding:0;margin:0;'><img
+                        src='https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5ca5bf1dff3c03fbf7cc9b3c_Kofi_logo_RGB_rounded.png'
+                        style='vertical-align: middle;align-content: center;height:20px;'
+                        alt="Ko-Fi Logo"> <a href='https://ko-fi.com/foobball' target="_blank">ko-fi.com/foobball</a>
+                </p>
+                <p style='padding:0;margin:0;'><img
+                        src='https://github.com/foobball/EmailFlooder/raw/main/assets/paypal.png'
+                        style='vertical-align: middle;align-content: center;height:20px;'
+                        alt="PayPal Logo"> <a href='https://paypal.me/foobball' target="_blank">paypal.me/foobball</a>
+                </p>
+                <!--<p style='padding:0;margin:0;'><img src='https://github.com/foobball/EmailFlooder/raw/main/assets/github.png'
+                                                    style='vertical-align: middle;align-content: center;height:20px;'
+                                                    alt="Github Logo"> <a href='https://github.com/foobball' target="_blank">github.com/foobball</a>
+                </p>-->
             </div>
         </div>
-        <br>-->
+        <br>
 
-        <p style='padding:0;margin:0;'><img src='assets/paypal.png'
-                                            style='vertical-align: middle;align-content: center;height:20px;'
-                                            alt="PayPal Logo"> <a href='https://paypal.me/foobball' target="_blank">paypal.me/foobball</a>
-        </p>
-        <p style='padding:0;margin:0;'><img src='assets/github.png'
-                                            style='vertical-align: middle;align-content: center;height:20px;'
-                                            alt="Github Logo"> <a href='https://github.com/foobball' target="_blank">github.com/foobball</a>
-        </p>
     </center>
 </div>
 
@@ -153,28 +197,33 @@
     const timeTaken = document.getElementById('time');
     const processingText = document.getElementById('processing');
     const inputGroup = document.getElementById('emailinput');
+    const gateways = document.getElementsByClassName('gateways')[0];
+    const formAmounts = document.getElementById('reqAmount');
 
     fetch('/speed')
-    .then(res => res.json())
-    .then(body => {
-        document.getElementById('averageWait').innerText = body.avg;
-    })
+        .then(res => res.json())
+        .then(body => {
+            document.getElementById('averageWait').innerText = body.avg;
+        })
 
+    let currFlood = false;
     function generate() {
+        if (currFlood) return;
+        currFlood = true;
         let agreeToTerms = sessionStorage.getItem('agree') || confirm(
             `To continue to use this site, please agree to terms and conditions that\n` +
-            ` - The email I'm providing is my own.\n` +
-            ` - foob.tech has no responsibility in the problems this tool causes to my inbox.\n` +
-            ` - I will not bypass this site's restrictions\n` +
-            ` - I will not abuse this tool\n\n` +
-            // ` - My access to this site can be revoked at any time for any reason\n\n` +
+            ` - The email you're providing is your own.\n` +
+            ` - You will not attempt to bypass this site's restrictions\n` +
+            ` - foob.tech has no responsibility in the problems this tool causes to your inbox.\n` +
+            ` - You will not abuse this tool\n\n` +
             `Select 'OK' or 'Confirm' if you agree to these terms\n` +
-            `Select 'Cancel' to leave foob.tech`
+            `Select 'Cancel' if you do NOT agree.`
         );
 
-        if (!agreeToTerms) return window.location = 'about:blank';
+        if (!agreeToTerms) return;
         sessionStorage.setItem('agree', 'yes');
 
+        gateways.style.display = 'none';
         btn.disabled = true;
         input.disabled = true;
         err.style.display = 'none';
@@ -185,13 +234,16 @@
             .then(body => {
                 input.disabled = false;
                 btn.disabled = false;
+                currFlood = false;
 
                 processingText.style.display = 'none';
 
                 if (body.error) {
                     err.style.display = 'block';
                     suc.style.display = 'none';
+                    gateways.style.display = 'block';
                     inputGroup.style.visibility = 'visible';
+                    input.focus();
                     return errtext.innerHTML = body.errorMsg;
                 }
 
@@ -200,7 +252,20 @@
                 errtext.innerText = 'None';
                 suc.style.display = 'block';
                 timeTaken.innerHTML = body.time;
-            })
+                formAmounts.innerHTML = body.forms;
+            }).catch((error) => {
+            input.disabled = false;
+            btn.disabled = false;
+
+            processingText.style.display = 'none';
+            err.style.display = 'block';
+            suc.style.display = 'none';
+            gateways.style.display = 'block';
+            inputGroup.style.visibility = 'visible';
+            input.focus();
+            currFlood = false;
+            return errtext.innerHTML = `${error}`;
+        })
     }
 
     input.addEventListener("keyup", (event) => {
