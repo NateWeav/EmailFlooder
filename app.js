@@ -170,8 +170,9 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
+        consola.success('Signed up for https://foxnews.com/newsletters');
     }),
-    "https://cbsnews.com/newsletters": (async email => {
+    "cbsnews.com/newsletters": (async email => {
         await fetch("https://www.cbsnews.com/newsletters/xhr/signup", {
             "headers": {
                 "accept": "*/*",
@@ -189,6 +190,7 @@ const sites = {
             "method": "POST",
             "mode": "cors"
         });
+        consola.success('Signed up for https://cbsnews.com/newsletters');
     }),
     "nbcboston.com/newsletters/": (async email => {
         // FIXED AND UPDATED
@@ -819,7 +821,6 @@ const floodall = async enteredEmail => {
     }
 
     return amountOfSites;
-
 }
 
 const start = async () => {
