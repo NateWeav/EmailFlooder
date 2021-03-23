@@ -1,0 +1,31 @@
+# Site List
+
+- [x] https://www.nbc26.com/account/manage-email-preferences (779 newsletters)
+- [x] https://www.crosswalk.com/newsletters/ (147)
+- [x] https://link.wcvb.com/join/5e3/signin (28)
+- [x] https://link.wgal.com/join/5e3/signin (28)
+- [x] https://www.click2houston.com/account/newsletters/ (26)
+- [x] https://www.nbcsandiego.com/newsletters/ (13)
+- [x] https://www.nbcphiladelphia.com/newsletters/ (12)
+- [x] https://www.nbcwashington.com/newsletters/ (11)
+- [x] https://www.nbcbayarea.com/newsletters/ (11)
+- [x] https://www.nbcchicago.com/newsletters/ (11)
+- [x] https://www.nbcboston.com/newsletters/ (11)
+- [x] https://www.nbcdfw.com/newsletters/ (11)
+- [x] https://www.outsideonline.com/2063191/outside-magazine-newsletter-signup (10)
+- [x] https://www.nbcconnecticut.com/newsletters/ (10)
+- [x] https://www.nbclosangeles.com/newsletters/ (10)
+- [x] https://www.nbcmiami.com/newsletters/ (10)
+- [x] https://www.foxnews.com/newsletters (10)
+- [x] https://www.nbcnewyork.com/newsletters/ (7)
+- [x] https://www.cbsnews.com/newsletters/ (7)
+- [x] https://www.cbssports.com/newsletters/cbs-sports-hq/ (5)
+- [x] https://www.msnbc.com/newsletters (5)
+
+## Can't do
+
+- [ ] (Uses reCaptcha) https://www.wsj.com/newsletters (58)
+- [ ] (Uses reCaptcha) https://www.healthline.com/newsletter-signup (31)
+- [ ] (Uses reCaptcha) https://www.nbcnews.com/newsletters (11)
+- [ ] (Uses reCaptcha) https://www.today.com/newsletters (9)
+- [ ] (Uses reCaptcha) https://www.contacts.nbc.ca/newsletter/subscription (7)
