@@ -5,8 +5,7 @@
 
 ---
 
-### Building this yourself
-(only do this if you want to edit the code)
+## Building this yourself
 
 - download nodejs
 - clone this repo
